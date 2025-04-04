@@ -9,7 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
 
+    @State private var isShowingSettings: Bool = false
     var fruits: [Fruit] = fruitsData
+    
     var body: some View {
         NavigationView {
             List {
@@ -22,6 +24,19 @@ struct ContentView: View {
                 }
             } //: List
             .navigationTitle("Fruits")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        isShowingSettings = true
+                    }) {
+                        Image(systemName: "gear")
+                    }
+                    .sheet(isPresented: $isShowingSettings) {
+                        SettingsView()
+                    }
+                }
+                
+            }
         } //: Navigation View
     }
 }
