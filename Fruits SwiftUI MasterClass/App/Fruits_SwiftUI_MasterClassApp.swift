@@ -11,7 +11,7 @@ import SwiftUI
 struct Fruits_SwiftUI_MasterClassApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            OnboardingView()
         }
     }
 }
