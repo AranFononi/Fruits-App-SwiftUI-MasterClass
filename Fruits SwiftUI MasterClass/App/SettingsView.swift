@@ -38,7 +38,13 @@ struct SettingsView: View {
                     // MARK: - Section 2
                     
                     // MARK: - Section 3
-                    Text("Hello, World!")
+                    GroupBox(
+                        label: SettingsLabelView(labelText: "Application", labelImage: "apps.iphone")
+                    ) {
+                        Divider().padding(.vertical, 4)
+                        
+                        
+                    }
                 } //: VStack
                 .navigationTitle(Text("Settings"))
                 .navigationBarTitleDisplayMode(.large)
