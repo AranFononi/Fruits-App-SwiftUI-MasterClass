@@ -10,7 +10,6 @@ import SwiftUI
 struct SettingsView: View {
     // MARK: - Properties
     
-    @Environment(\.isPresented) var isPresented
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
