@@ -41,10 +41,16 @@ struct SettingsView: View {
                     GroupBox(
                         label: SettingsLabelView(labelText: "Application", labelImage: "apps.iphone")
                     ) {
-                        Divider().padding(.vertical, 4)
                         
-                        
+                        SettingsRowView(name: "Developer", content: "Aran Fononi")
+                        SettingsRowView(name: "Designer", content: "Robert Petras")
+                        SettingsRowView(name: "Compatibility", content: "iOS +15")
+                        SettingsRowView(name: "Github", linkLabel: "Aran Apps", linkDestination: "github.com/AranFononi")
+                        SettingsRowView(name: "Linkedin", linkLabel: "Aran Fononi", linkDestination: "www.linkedin.com/in/aran-fononi-18182b265")
+                        SettingsRowView(name: "Course", content: "Udemy SwiftUI Masterclass")
+                        SettingsRowView(name: "Version", content: "1.0.0")
                     }
+                    
                 } //: VStack
                 .navigationTitle(Text("Settings"))
                 .navigationBarTitleDisplayMode(.large)
