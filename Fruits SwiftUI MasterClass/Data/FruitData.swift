@@ -1,4 +1,15 @@
-Fruit(
+//
+//  FruitData.swift
+//  Fruits SwiftUI MasterClass
+//
+//  Created by Aran Fononi on 4/4/25.
+//
+
+import SwiftUI
+
+// MARK: - Fruits Data
+
+let fruitsData: [Fruit] = [Fruit(
     title: "Blueberry",
     headline: "Blueberries are sweet, nutritious and wildly popular fruit all over the world.",
     image: "blueberry",
@@ -382,3 +393,5 @@ Fruit(
       """,
     nutrition: ["218 kJ (52 kcal)","10.39 g","0.17 g","0.26 g","A, B1, B2, B3, B5, B6, B9, C, E, K","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc"]
   )
+]
+    
