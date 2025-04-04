@@ -8,17 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
-    @AppStorage("isOnboarding") var isOnboarding: Bool?
 
+    var fruits: [Fruit] = fruitsData
     var body: some View {
-        VStack {
-            Button {
-                isOnboarding = true
-            } label: {
-                Text("Back")
-            }
-        }
-        .padding()
+        NavigationView {
+            List {
+                ForEach(fruits.shuffled()) { fruit in
+                    FruitRowView(fruit: fruit)
+                        .padding(.vertical, 6)
+                }
+            } //: List
+            .navigationTitle("Fruits")
+        } //: Navigation View
     }
 }
 
