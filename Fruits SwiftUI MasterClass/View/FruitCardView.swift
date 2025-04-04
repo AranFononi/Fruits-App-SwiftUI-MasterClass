@@ -9,6 +9,8 @@ import SwiftUI
 
 struct FruitCardView: View {
     // MARK: - Properties
+    @State private var isAnimating: Bool = false
+    
     
     // MARK: - Body
     var body: some View {
@@ -20,9 +22,10 @@ struct FruitCardView: View {
                     .resizable()
                     .scaledToFit()
                     .shadow(color: .black.opacity(0.15),radius: 8, x: 6, y: 8)
+                    .scaleEffect(isAnimating ? 1 : 0.6)
                 
                 // Fruit Title
-                Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+                Text("Blueberry")
                     .foregroundStyle(.white)
                     .font(.largeTitle)
                     .fontWeight(.heavy)
@@ -40,9 +43,15 @@ struct FruitCardView: View {
                 
             } //: VStack
         } //: ZStack
+        .onAppear {
+            withAnimation(.easeOut(duration: 0.5)) {
+                isAnimating = true
+            }
+        }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
         .background(LinearGradient(colors: [.colorBlueberryLight, .colorBlueberryDark], startPoint: .top, endPoint: .bottom))
         .clipShape(RoundedRectangle(cornerRadius: 20))
+        .padding(.horizontal, 20)
         
     }
 }
