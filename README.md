@@ -46,4 +46,4 @@ Everything is built using **SwiftUI**, with a focus on layout, navigation, and r
 ## 📬 Contact  
 For feedback or questions, reach out:  
 - **Email**: [aranfononi@gmail.com](mailto:aranfononi@gmail.com)  
-- **LinkedIn**: [Aran Fononi](https://www.linkedin.com/in/aran-fononi-18182b265)
+
